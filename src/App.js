@@ -46,7 +46,7 @@ function Counter() {
       </div>
       <div style={{ display: "flex", gap: 5, alignItems: "center", justifyContent: "center" }}>
         <p>
-          {count === 0 ? `Today is` : `${count} days from today is`} {currentDate.toDateString()}
+          {count === 0 ? `Today is` : count > 0 ? `${count} days from today is` : `${Math.abs(count)} days ago was`} {currentDate.toDateString()}
         </p>
       </div>
     </>
